@@ -1,0 +1,23 @@
+@using Microsoft.AspNetCore.Mvc.Rendering
+@{
+    ViewData["Title"] = "Registro de Ingreso";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="placa">Placa del Vehículo:</label>
+        <input type="text" id="placa" name="placa" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Registrar Ingreso</button>
+</form>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-info mt-3" role="alert">
+        @ViewBag.Message
+    </div>
+}
+
+<a href="/Vehiculo/Salida" class="btn btn-secondary mt-3">Registrar Salida</a>
